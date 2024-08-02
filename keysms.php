@@ -29,6 +29,7 @@ load_plugin_textdomain(
 
 include_once __DIR__ . '/includes/keysms-settings.php';
 include_once __DIR__ . '/includes/keysms-admin-page.php';
+include_once __DIR__ . '/includes/keysms-woocomerce.php';
 include_once __DIR__ . '/includes/KeySMS.php';
 
 KeySMS::init();

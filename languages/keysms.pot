@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-08-02T11:26:35+00:00\n"
+"POT-Creation-Date: 2024-08-02T13:01:25+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: keysms\n"
@@ -39,8 +39,8 @@ msgstr ""
 
 #: includes/keysms-admin-page.php:24
 #: includes/keysms-admin-page.php:25
-#: includes/keysms-admin-page.php:99
-#: includes/keysms-admin-page.php:125
+#: includes/keysms-admin-page.php:112
+#: includes/keysms-admin-page.php:138
 msgid "Send SMS"
 msgstr ""
 
@@ -48,60 +48,64 @@ msgstr ""
 msgid "Support"
 msgstr ""
 
-#: includes/keysms-admin-page.php:82
+#: includes/keysms-admin-page.php:64
+msgid "Please configure your KeySMS credentials."
+msgstr ""
+
+#: includes/keysms-admin-page.php:90
 msgid "The SMS has been sent successfully."
 msgstr ""
 
-#: includes/keysms-admin-page.php:106
-#: includes/keysms-settings.php:55
+#: includes/keysms-admin-page.php:119
+#: includes/keysms-settings.php:53
 msgid "Sender"
 msgstr ""
 
-#: includes/keysms-admin.page:56
-msgid "Please configure your KeySMS credentials."
-msgstr: ""
-
-#: includes/keysms-admin-page.php:109
-#: includes/keysms-settings.php:155
+#: includes/keysms-admin-page.php:122
+#: includes/keysms-settings.php:153
 msgid "Select sender"
 msgstr ""
 
-#: includes/keysms-admin-page.php:117
+#: includes/keysms-admin-page.php:130
 msgid "Recipient"
 msgstr ""
 
-#: includes/keysms-admin-page.php:121
+#: includes/keysms-admin-page.php:134
 msgid "Message"
 msgstr ""
 
-#: includes/keysms-settings.php:19
+#: includes/keysms-settings.php:17
 msgid "Credentials"
 msgstr ""
 
-#: includes/keysms-settings.php:29
+#: includes/keysms-settings.php:27
 msgid "Username"
 msgstr ""
 
-#: includes/keysms-settings.php:42
+#: includes/keysms-settings.php:40
 msgid "API key"
 msgstr ""
 
-#: includes/keysms-settings.php:62
+#: includes/keysms-settings.php:60
 msgid "Default Sender"
 msgstr ""
 
-#: includes/keysms-settings.php:104
+#: includes/keysms-settings.php:102
 msgid "Don't have an account?"
 msgstr ""
 
-#: includes/keysms-settings.php:104
+#: includes/keysms-settings.php:102
 msgid "Sign up for a free trial"
 msgstr ""
 
-#: includes/keysms-settings.php:199
+#: includes/keysms-settings.php:197
 msgid "Invalid KeySMS credentials."
 msgstr ""
 
-#: includes/keysms-settings.php:207
+#: includes/keysms-settings.php:205
 msgid "Save Settings"
+msgstr ""
+
+#: includes/keysms-woocomerce.php:16
+msgid "Send SMS to customer"
 msgstr ""

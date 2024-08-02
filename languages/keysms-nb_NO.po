@@ -26,9 +26,9 @@ msgstr "Melding ble sendt."
 msgid "Sender"
 msgstr "Avsender"
 
-#: includes/keysms-admin.page:56
+#: includes/keysms-admin.page:64
 msgid "Please configure your KeySMS credentials."
-msgstr: "Vennligst konfigurer KeySMS innlogging."
+msgstr: "Vennligst konfigurer KeySMS."
 
 #: includes/keysms-admin-page.php:109
 #: includes/keysms-settings.php:155
@@ -74,3 +74,7 @@ msgstr "Ugyldig brukernavn eller API nøkkel."
 #: includes/keysms-settings.php:207
 msgid "Save Settings"
 msgstr "Lagre"
+
+#: includes/keysms-woocomerce.php:16
+msgid "Send SMS to customer"
+msgstr "Send SMS til kunde"

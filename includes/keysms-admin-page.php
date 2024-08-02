@@ -46,6 +46,14 @@ function admin_page()
     $keysms = KeySMS::get_instance();
     $error = false;
 
+    $receiver = null;
+    $autofocus = 'receiver';
+
+    if (isset($_GET['phone'])) {
+        $receiver = sanitize_text_field($_GET['phone']);
+        $autofocus = 'message';
+    }
+
     if ($keysms === null) {
         $url = esc_url(add_query_arg(
             'page',
@@ -98,6 +106,12 @@ function admin_page()
     }
 
     $nonce = wp_create_nonce('keysms_send_sms');
+
+    $submit_attrs = [];
+
+    if ($error) {
+        $submit_attrs['disabled'] = 'disabled';
+    }
 ?>
     <div class="wrap">
         <img src="<?php echo esc_attr(plugin_dir_url(dirname(__FILE__)) . 'assets/logo.png'); ?>" alt="KeySMS" style="max-width: 100%; height: auto;">
@@ -120,14 +134,14 @@ function admin_page()
                 <?php } ?>
                 <tr>
                     <th scope="row"><label for="keysms_recipient"><?php echo esc_html(__('Recipient', 'keysms')); ?></label></th>
-                    <td><input required type="tel" name="keysms_recipient" id="keysms_recipient" <?php echo esc_attr(!$error ?: 'disabled'); ?>></td>
+                    <td><input required type="tel" name="keysms_recipient" id="keysms_recipient" <?php echo esc_attr(!$error ?: 'disabled'); ?> value="<?php echo esc_attr($receiver); ?>" <?php echo esc_attr($autofocus === 'receiver' ? 'autofocus' : null); ?>></td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="keysms_message"><?php echo esc_html(__('Message', 'keysms')); ?></label></th>
-                    <td><textarea required name="keysms_message" id="keysms_message" rows="5" cols="50" <?php echo esc_attr(!$error ?: 'disabled'); ?>></textarea></td>
+                    <th scope=" row"><label for="keysms_message"><?php echo esc_html(__('Message', 'keysms')); ?></label></th>
+                    <td><textarea required name="keysms_message" id="keysms_message" rows="5" cols="50" <?php echo esc_attr(!$error ?: 'disabled'); ?> <?php echo esc_attr($autofocus === 'message' ? 'autofocus' : null); ?>></textarea></td>
                 </tr>
             </table>
-            <?php submit_button(__('Send SMS', 'keysms'), 'primary', 'submit', true, ['disabled' => esc_attr(!$error ?: 'disabled')]); ?>
+            <?php submit_button(__('Send SMS', 'keysms'), 'primary', 'submit', true, $submit_attrs); ?>
         </form>
 
         </table>

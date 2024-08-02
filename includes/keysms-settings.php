@@ -2,8 +2,6 @@
 
 namespace KeySMS;
 
-use Exception;
-
 if (!defined('ABSPATH')) {
     exit;
 }

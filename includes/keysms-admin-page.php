@@ -17,6 +17,7 @@ function admin_menu()
         'keysms',
         'KeySMS\\admin_page',
         'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iNDguMDAwMDAwcHQiIGhlaWdodD0iNDguMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCA0OC4wMDAwMDAgNDguMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCw0OC4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiMwMDAwMDAiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik0xNDggMzg5IGwtODggLTUxIDAgLTEwMyAwIC0xMDMgODkgLTUyIDkwIC01MSA5MCA1MSA5MSA1MSAwIDEwNCAwCjEwNCAtOTAgNTAgYy00OSAyOCAtOTEgNTEgLTkyIDUxIC0yIDAgLTQyIC0yMyAtOTAgLTUxeiBtMTc1IC04OSBjNTkgLTY2IDE3Ci0xNDMgLTg4IC0xNjAgLTkyIC0xNSAtOTQgLTE1IC05MyAyMyAwIDE3IC0zIDQ0IC03IDYwIC0yNiA5NyAxMTUgMTU1IDE4OCA3N3oiLz4KPC9nPgo8L3N2Zz4K',
+        30
     );
 
     add_submenu_page(
@@ -34,6 +35,15 @@ function admin_menu()
 function add_support_link()
 {
     global $submenu;
+
+    $url = $url = esc_url(add_query_arg(
+        'page',
+        'keysms_settings',
+        get_admin_url() . 'options-general.php'
+    ));
+    $submenu['keysms'] = !isset($submenu['keysms']) ? [] : $submenu['keysms'];
+    $submenu['keysms'][] = [__('Settings', 'keysms'), 'manage_options', $url];
+
     $url = 'http://www.keysms.no/kontakt-oss';
     $submenu['keysms'] = !isset($submenu['keysms']) ? [] : $submenu['keysms'];
     $submenu['keysms'][] = [__('Support', 'keysms'), 'manage_options', $url];

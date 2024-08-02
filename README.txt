@@ -24,6 +24,7 @@ KeySMS is a plugin to send SMS messages to your customers. The plugin is free bu
 == Screenshots ==
 
 1. Sending an SMS with KeySMS
+2. Quick send SMS feature for WooComerce
 
 == Changelog ==
 

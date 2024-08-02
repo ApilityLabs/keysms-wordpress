@@ -19,7 +19,9 @@ The plugin is free but you need an account at KeySMS to use the service.
 
 ## Screenshots
 
-![A screenshot of KeySMS for WordPress](/assets/screenshot-1.png?raw=true "Screenshot")
+![A screenshot of KeySMS for WordPress](/assets/screenshot-1.png?raw=true "Screenshot 1")
+
+![A screenshot of quick send SMS feature for WooComerce](/assets/screenshot-2.png?raw=true "Screenshot 2")
 
 ---
 
